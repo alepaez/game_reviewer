@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :games
+  has_many :guides
+
   authenticates_with_sorcery!
 
   validates :password, length: { minimum: 3 }
