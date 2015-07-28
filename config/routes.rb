@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
 
+  namespace :commander do
+    get '/' => 'dashboard#index'
+  end
+
+
 end
